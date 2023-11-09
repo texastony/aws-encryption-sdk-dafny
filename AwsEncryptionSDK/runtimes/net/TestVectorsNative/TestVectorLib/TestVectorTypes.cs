@@ -74,6 +74,10 @@ namespace TestVectors
         public string Ciphertext { get; set; }
         [JsonProperty("master-keys")]
         public IList<MasterKey> MasterKeys { get; set; }
+        [JsonProperty("cmm")]
+        public string CMM { get; set; }
+        [JsonProperty("encryption-context")]
+        public Dictionary<string, string> EncryptionContext { get; set; }
         [JsonProperty("result")]
         public DecryptResult Result { get; set; }
         [JsonProperty("decryption-method")]
@@ -134,6 +138,8 @@ namespace TestVectors
         [JsonRequired]
         [JsonProperty("master-keys")]
         public IList<MasterKey> MasterKeys { get; set; }
+        [JsonProperty("cmm")]
+        public string CMM { get; set; }
     }
 
     public class EncryptVector
